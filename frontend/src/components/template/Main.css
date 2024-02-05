@@ -1,0 +1,96 @@
+main > div {
+  color: #007bc2;
+  backdrop-filter: saturate(180%) blur(15px);
+  font-size: 1.2rem;
+}
+
+label {
+  color: #ffb834;
+}
+
+th {
+  text-align: center;
+  /* font-weight: 500; */
+}
+
+td {
+  color: black;
+  text-align: center;
+}
+
+/************* Media Querie ****************/
+
+/* Mobile */
+@media (max-width: 480px) {
+  main {
+    margin-top: 70px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Small devices */
+@media (min-width: 481px) and (max-width: 767px) {
+  main > div {
+    font-size: 1.2rem;
+  }
+}
+
+/* Small tablets */
+@media (min-width: 768px) and (max-width: 990px) {
+}
+
+@media (max-width: 991px) {
+  main > div {
+    margin: 10px;
+  }
+
+  .display-3 {
+    font-size: 50px;
+    text-align: center;
+  }
+}
+
+/* Large tablets/laptops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  div .form {
+    font-size: 1vw;
+  }
+
+  div .form .form-control {
+    font-size: 1vw;
+  }
+
+  div .form .btn {
+    font-size: 1vw;
+  }
+
+  div .table {
+    font-size: 1vw;
+  }
+
+  div .table .btn {
+    font-size: 1vw;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) and (max-width: 1919px) {
+  div .form {
+    font-size: 1vw;
+  }
+
+  div .table {
+    font-size: 1vw;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1920px) {
+}

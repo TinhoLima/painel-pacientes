@@ -1,0 +1,39 @@
+header.header {
+  background-color: #fff;
+  /* background-color: rgba(255, 255, 255, 0); */
+  /* backdrop-filter: saturate(180%) blur(20px); */
+  padding: 0px 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+header.header h1 {
+  font-size: 2em;
+  text-align: center;
+}
+
+/************* Media Querie ****************/
+
+/* Mobile */
+@media (max-width: 480px) {
+}
+
+/* Extra small devices */
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* Small tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Large tablets/laptops */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Desktop */
+@media (min-width: 1200px) and (max-width: 1919px) {
+}
+
+/* Extra large screens */
+@media (min-width: 1920px) {
+}
