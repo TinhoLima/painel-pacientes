@@ -2,26 +2,26 @@ import React, { Component } from "react";
 import Main from "../template/Main";
 import axios from "axios";
 
+const date = new Date();
+const today = date.toLocaleDateString("pt-BR", {
+  day: "2-digit",
+  month: "2-digit",
+});
+
 const headerProps = {
-  title: "Lista Cirúrgica",
+  title: "LISTA CIRÚRGICA - ",
+  date: today.toLocaleString(),
 };
 
 // Inicio do backend
-// const baseUrl = 'https://json-crud-eight.vercel.app/users'
 const baseUrl = "http://localhost:3001/users";
 const initialState = {
   user: {
     sala: "",
     horario: "",
     paciente: "",
-    medico: "",
     procedimento: "",
-    leito: "",
-    opmematerial: "",
-    sangue: "",
-    avaliacao: "",
-    alergia: "",
-    salaposcirurgica: "",
+    medico: "",
   },
 
   list: [],
@@ -102,14 +102,8 @@ export default class UserCrud extends Component {
             <th>Sala</th>
             <th>Horário da cirúrgia</th>
             <th>Nome do paciente</th>
-            <th>Nome do médico</th>
             <th>Procedimento</th>
-            <th>Leito</th>
-            <th>OPME - Material</th>
-            <th>Sangue</th>
-            <th>Termo avaliação</th>
-            <th>Alergia</th>
-            <th>Sala que vai após a cirurgia</th>
+            <th>Nome do médico</th>
           </tr>
         </thead>
         <tbody>{this.renderRows()}</tbody>
@@ -121,17 +115,11 @@ export default class UserCrud extends Component {
     return this.state.list.map((user) => {
       return (
         <tr key={user.sala}>
-          <td>{user.sala}</td>
-          <td>{user.horario}</td>
+          <td className="sala">{user.sala}</td>
+          <td className="hora">{user.horario}</td>
           <td>{user.paciente}</td>
-          <td>{user.medico}</td>
           <td>{user.procedimento}</td>
-          <td>{user.leito}</td>
-          <td>{user.opmematerial}</td>
-          <td>{user.sangue}</td>
-          <td>{user.avaliacao}</td>
-          <td>{user.alergia}</td>
-          <td>{user.salaposcirurgica}</td>
+          <td>{user.medico}</td>
         </tr>
       );
     });

@@ -1,7 +1,7 @@
 :root {
   /* variáveis */
   --bg-dark: #383838;
-  --primary-color: #ffb120;
+  --primary-color: #0060af;
 
   --logo-height: 100px;
   --header-height: 100px;
@@ -30,9 +30,6 @@
     "content content"
     "footer footer";
   height: 100vh;
-  background-image: url("");
-  background-position: center center;
-  background-size: cover;
 }
 
 aside.logo {

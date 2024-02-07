@@ -1,38 +1,43 @@
 aside.logo {
-    /* background-color: var(--primary-color); */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+  /* background-color: var(--primary-color); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 8px 1px 10px rgb(165, 165, 165);
 }
 
 aside.logo img {
-    /* padding: 0px 15px; */
-    width: 100%;
-}
-
-@media(max-width: 576px) {
-    aside.logo img {
-        width: 350px;
-    }
+  /* padding: 0px 15px; */
+  width: 100%;
 }
 
 /************* Media Querie ****************/
 
 /* Mobile */
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+}
 
 /* Extra small devices */
-@media (min-width: 481px) and (max-width: 767px) {}
+@media (min-width: 481px) and (max-width: 767px) {
+}
 
+@media (max-width: 576px) {
+  aside.logo img {
+    width: 350px;
+  }
+}
 /* Small tablets */
-@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 768px) and (max-width: 991px) {
+}
 
 /* Large tablets/laptops */
-@media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 992px) and (max-width: 1199px) {
+}
 
 /* Desktop */
-@media (min-width: 1200px) and (max-width: 1919px) {}
+@media (min-width: 1200px) and (max-width: 1919px) {
+}
 
 /* Extra large screens */
-@media (min-width: 1920px) {}
+@media (min-width: 1920px) {
+}
