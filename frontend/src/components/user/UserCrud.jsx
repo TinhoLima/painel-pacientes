@@ -17,11 +17,13 @@ const headerProps = {
 const baseUrl = "http://localhost:3001/users";
 const initialState = {
   user: {
+    id: "",
     sala: "",
     horario: "",
     paciente: "",
     procedimento: "",
     medico: "",
+    status: "",
   },
 
   list: [],
@@ -43,21 +45,17 @@ export default class UserCrud extends Component {
   save() {
     // Incluir ou alterar o usuário. Incluir - POST / Alterar - PUT
     const user = this.state.user;
-    const method = user.sala ? "put" : "post";
-    const url = user.sala ? `${baseUrl}/${user.sala}` : baseUrl;
-    if (user == initialState.user) {
-      window.alert("Favor preencher todos os campos.");
-    } else {
-      axios[method](url, user).then((resp) => {
-        // Atualizar a lista local.
-        const list = this.getUpdateList(resp.data);
-        this.setState({ user: initialState.user, list });
-      });
-    }
+    const method = user.id ? "put" : "post";
+    const url = user.id ? `${baseUrl}/${user.id}` : baseUrl;
+    axios[method](url, user).then((resp) => {
+      // Atualizar a lista local.
+      const list = this.getUpdateList(resp.data);
+      this.setState({ user: initialState.user, list });
+    });
   }
 
   getUpdateList(user, add = true) {
-    const list = this.state.list.filter((u) => u.sala !== user.sala);
+    const list = this.state.list.filter((u) => u.id !== user.id);
     if (add) list.unshift(user);
     return list;
   }
@@ -68,19 +66,12 @@ export default class UserCrud extends Component {
     this.setState({ user });
   }
 
-  handleEnter(event) {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      this.save();
-    }
-  }
-
   load(user) {
     this.setState({ user });
   }
 
   remove(user) {
-    axios.delete(`${baseUrl}/${user.sala}`).then((resp) => {
+    axios.delete(`${baseUrl}/${user.id}`).then((resp) => {
       const list = this.getUpdateList(user, false);
       this.setState({ list });
     });
@@ -104,6 +95,7 @@ export default class UserCrud extends Component {
             <th>Nome do paciente</th>
             <th>Procedimento</th>
             <th>Nome do médico</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>{this.renderRows()}</tbody>
@@ -114,12 +106,16 @@ export default class UserCrud extends Component {
   renderRows() {
     return this.state.list.map((user) => {
       return (
-        <tr key={user.sala}>
+        <tr key={user.id}>
           <td className="sala">{user.sala}</td>
           <td className="hora">{user.horario}</td>
           <td>{user.paciente}</td>
           <td>{user.procedimento}</td>
           <td>{user.medico}</td>
+          {/* <td>{user.status}</td> */}
+          <td>
+            <div className="vermelho"></div>
+          </td>
         </tr>
       );
     });
