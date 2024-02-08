@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "sala": 1,
+      "horario": "08:00",
+      "paciente": "Joao Celestino Silva",
+      "procedimento": "Neurocirurgia",
+      "medico": "Dr. barreto",
+      "status": "ocupado"
+    },
+    {
+      "id": 2,
+      "sala": 2,
+      "horario": "09:00",
+      "paciente": "Benedito T. da Silva",
+      "procedimento": "Neurocirurgia",
+      "medico": "Dr. Coutinho",
+      "status": ""
+    },
+    {
+      "id": 3,
+      "sala": 3,
+      "horario": "10:00",
+      "paciente": "Roberto T. da Silva",
+      "procedimento": "Neurocirurgia",
+      "medico": "Dr. barreto",
+      "status": ""
+    },
+    {
+      "id": 4,
+      "sala": 2,
+      "horario": "11:00",
+      "paciente": "Benedito T. da Silva",
+      "procedimento": "Neurocirurgia",
+      "medico": "Dr. barreto",
+      "status": ""
+    },
+    {
+      "id": 5,
+      "sala": 4,
+      "horario": "12:00",
+      "paciente": "Benedito T. da Silva",
+      "procedimento": "Neurocirurgia",
+      "medico": "Dr. barreto",
+      "status": ""
+    },
+    {
+      "id": 6,
+      "sala": 1,
+      "horario": "13:00",
+      "paciente": "Benedito T. da Silva",
+      "procedimento": "Neurocirurgia",
+      "medico": "Dr. barreto",
+      "status": ""
+    }
+  ]
+}
