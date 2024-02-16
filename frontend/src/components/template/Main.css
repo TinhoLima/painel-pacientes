@@ -2,16 +2,19 @@ th {
   text-align: center;
   color: var(--primary-color);
   font-size: 2rem;
-  /* font-weight: 500; */
 }
 
 td {
-  background-color: rgba(212, 254, 255, 0.212);
-  backdrop-filter: saturate(180%) blur(15px);
+  /* background: #ebebeb; */
   color: var(--bg-dark);
   text-align: center;
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+tr:nth-child(odd) td {
+  background-color: rgba(212, 254, 255, 0.212);
+  backdrop-filter: saturate(180%) blur(15px);
 }
 
 td.sala {
